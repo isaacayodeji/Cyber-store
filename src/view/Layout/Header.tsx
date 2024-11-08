@@ -9,13 +9,13 @@ import { routerPath } from "../../utils/helper";
 const Header: React.FC = () => {
   return (
     <div className="sticky top-0 z-30 bg-white">
-      <div className="flex justify-between p-5">
+      <div className="flex justify-between p-5 w-full max-w-[1400px] mx-auto">
         <Link to={routerPath.Products}>
           <img className="cursor-pointer" src={CyberLogo} alt="cyber" />
         </Link>
         <div className="">
           <Input
-            className="lg:w-[400px]"
+            className="lg:w-[400px] max-md:hidden"
             size="large"
             placeholder="search"
             prefix={<CiSearch />}
@@ -28,7 +28,11 @@ const Header: React.FC = () => {
             </Badge>
           </Link>
           <Link to={routerPath.Profile}>
-            <img className="h-8 w-8 cursor-pointer" src={User} alt="user" />
+            <img
+              className="h-8 w-8 cursor-pointer max-md:hidden"
+              src={User}
+              alt="user"
+            />
           </Link>
         </div>
       </div>
